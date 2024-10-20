@@ -2,7 +2,7 @@
     "name": "houdunwang/wechat",
     "description": "微信开发 SDK",
     "type": "library",
-    "version": "v3.0.0",
+    "version": "v3.0.1",
     "keywords": [
         "wechat"
     ],
