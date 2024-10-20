@@ -3,11 +3,16 @@
     "description": "微信开发 SDK",
     "type": "library",
     "version": "v3.0.0",
+    "keywords": [
+        "wechat"
+    ],
+    "homepage": "http://www.houdunren.com/",
     "license": "MIT",
     "autoload": {
         "psr-4": {
             "Houdunwang\\Wechat\\": "src/"
-        }
+        },
+        "files": []
     },
     "authors": [
         {
@@ -16,5 +21,7 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "php": ">=8.2.0"
+    }
 }
