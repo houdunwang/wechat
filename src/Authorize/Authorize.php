@@ -1,8 +1,8 @@
 <?php
 
-namespace Houdunren\Wechat\Authorize;
+namespace Houdunwang\Wechat\Authorize;
 
-use Houdunren\Wechat\WeChat;
+use Houdunwang\Wechat\WeChat;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Facades\Http;
 use URL;

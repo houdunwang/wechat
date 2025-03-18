@@ -1,11 +1,11 @@
 <?php
 
-namespace Houdunren\Wechat\Message;
+namespace Houdunwang\Wechat\Message;
 
-use Houdunren\Wechat\Message\Traits\BaseMessage;
-use Houdunren\Wechat\Message\Traits\ButtonMessage;
-use Houdunren\Wechat\Message\Traits\EventMessage;
-use Houdunren\Wechat\WeChat;
+use Houdunwang\Wechat\Message\Traits\BaseMessage;
+use Houdunwang\Wechat\Message\Traits\ButtonMessage;
+use Houdunwang\Wechat\Message\Traits\EventMessage;
+use Houdunwang\Wechat\WeChat;
 
 //被动消息处理
 class Message extends WeChat

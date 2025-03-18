@@ -1,6 +1,6 @@
 {
     "name": "houdunwang/wechat",
-    "description": "微信开发 SDK",
+    "description": "微信公众号开发",
     "type": "library",
     "version": "v3.0.3",
     "keywords": [
@@ -10,7 +10,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Houdunren\\Wechat\\": "src/"
+            "Houdunwang\\Wechat\\": "src/"
         },
         "files": []
     },

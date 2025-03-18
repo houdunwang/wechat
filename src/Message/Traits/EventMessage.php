@@ -1,6 +1,6 @@
 <?php
 
-namespace Houdunren\Wechat\Message\Traits;
+namespace Houdunwang\Wechat\Message\Traits;
 
 // 事件推送消息
 trait EventMessage

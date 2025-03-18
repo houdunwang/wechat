@@ -1,6 +1,6 @@
 <?php
 
-namespace Houdunren\Wechat\Message\Traits;
+namespace Houdunwang\Wechat\Message\Traits;
 
 // 普通消息
 trait BaseMessage

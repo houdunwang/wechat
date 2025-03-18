@@ -1,10 +1,10 @@
 <?php
 
-namespace Houdunren\Wechat\User;
+namespace Houdunwang\Wechat\User;
 
-use Houdunren\Wechat\User\Traits\UserInfo;
-use Houdunren\Wechat\User\Traits\UserList;
-use Houdunren\Wechat\WeChat;
+use Houdunwang\Wechat\User\Traits\UserInfo;
+use Houdunwang\Wechat\User\Traits\UserList;
+use Houdunwang\Wechat\WeChat;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Facades\Http;
 

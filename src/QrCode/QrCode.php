@@ -1,8 +1,8 @@
 <?php
 
-namespace Houdunren\Wechat\QrCode;
+namespace Houdunwang\Wechat\QrCode;
 
-use Houdunren\Wechat\WeChat;
+use Houdunwang\Wechat\WeChat;
 use Illuminate\Support\Facades\Http;
 
 //二维码

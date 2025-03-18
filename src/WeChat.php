@@ -1,6 +1,6 @@
 <?php
 
-namespace Houdunren\Wechat;
+namespace Houdunwang\Wechat;
 
 use Exception;
 use Illuminate\Http\Client\RequestException;
@@ -60,7 +60,7 @@ class WeChat
      *
      * @param string $name 消息字段
      */
-    final public function getMessage(string $name = null)
+    final public function getMessage(string | null $name = null)
     {
         if ($name) {
             return self::$message[$name] ?? '';
