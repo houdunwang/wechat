@@ -2,7 +2,7 @@
     "name": "houdunwang/wechat",
     "description": "微信公众号开发",
     "type": "library",
-    "version": "v3.0.5",
+    "version": "v3.0.6",
     "keywords": [
         "wechat"
     ],

@@ -15,16 +15,21 @@ trait EventMessage
         return $this->getMessage('MsgType') == 'event' && $this->getMessage('Event') == 'unsubscribe' && !$this->getMessage('EventKey');
     }
 
-    //_扫描带参数二维码事件，用户未关注时，进行关注后的事件推送_
+    //_扫描带参数二维码事件，用户已经关注，扫码后的推送事件
     public function isSubscribeScanEvent()
     {
-        return $this->getMessage('MsgType') == 'event' && $this->getMessage('Event') == 'SCAN' && $this->getMessage('EventKey');
+        return $this->getMessage('MsgType') == 'event' && $this->getMessage('Event') == 'SCAN' && $this->getMessage('EventKey') && $this->getMessage('Ticket');
+    }
+
+    public function isUnSubscribeScanEvent()
+    {
+        return $this->getMessage('MsgType') == 'event' && $this->getMessage('Event') == 'subscribe' && $this->getMessage('EventKey') && $this->getMessage('Ticket');
     }
 
     //扫描带参数二维码事件，用户已关注时的事件推送
     public function isScanEvent()
     {
-        return $this->getMessage('MsgType') == 'event' && $this->getMessage('Event') == 'SCAN' && $this->getMessage('EventKey');
+        return $this->isSubscribeScanEvent() || $this->isUnSubscribeScanEvent();
     }
 
     public function isLocationEvent()
