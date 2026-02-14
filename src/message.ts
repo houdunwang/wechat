@@ -1,16 +1,13 @@
-import Wechat from '../index.js'
-import { Type } from './type.js'
+import Wechat from './index.js'
 
-export default class Message extends Type {
-  constructor(protected wechat: Wechat) {
-    super(wechat)
-  }
+export default class Message {
+  constructor(protected wechat: Wechat) {}
 
   private base(type: string, content: string) {
     return `
       <xml>
-        <ToUserName><![CDATA[${this.wechat.request.FromUserName}]]></ToUserName>
-        <FromUserName><![CDATA[${this.wechat.request.ToUserName}]]></FromUserName>
+        <ToUserName><![CDATA[${this.wechat.wechatMessage?.FromUserName}]]></ToUserName>
+        <FromUserName><![CDATA[${this.wechat.wechatMessage?.ToUserName}]]></FromUserName>
         <CreateTime>${Math.floor(Date.now() / 1000)}</CreateTime>
         <MsgType><![CDATA[${type}]]></MsgType>
         ${content}

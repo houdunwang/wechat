@@ -1,16 +1,17 @@
 import { XMLParser } from 'fast-xml-parser'
 import { createHash } from 'node:crypto'
 import { IConfig, IWechatMessage } from './types.js'
-import message from './message/message.js'
+import message from './message.js'
+import { Base } from './base.js'
 
-export class Wechat {
+export class Wechat extends Base {
+  // 由于基类 Base 中 wechatMessage 是必选属性，此处需要明确声明
+  public override wechatMessage?: IWechatMessage
   protected config: IConfig = undefined!
-  message: message = undefined!
-  request: IWechatMessage = undefined!
+  public services = { message: new message(this) }
 
   init(config: IConfig) {
     this.config = config
-    this.message = new message(this)
     return this.parse()
   }
 
@@ -18,7 +19,7 @@ export class Wechat {
     const parser = new XMLParser()
     const parseData = parser.parse(this.config.raw ?? '') as { xml: IWechatMessage }
     const data = parseData.xml
-    this.request = data
+    this.wechatMessage = data
     return this
   }
 
